@@ -5,6 +5,7 @@ $(onReady);
 function onReady(){
   //listeners
   $('#searchBtn').on('click', function(){
+    var randNum = Math.floor(Math.random() * 25);
     if($('#userInput').val() === '' || $('#userInput').val() === undefined){
       alert('OhmyGawd!');
     } else {
@@ -18,14 +19,15 @@ function onReady(){
         success: function (response) {
           console.log(response);
           if(response.data.length === 0){
-            $('.container').append('<div><p>Whoopsies</p><img src= https://media.giphy.com/media/80TEu4wOBdPLG/giphy.gif?response_id=5925e85668c66efd24a18672><button class="rmvBtn">Remove</button></div>');
+            $('.container').append('<div class="whoopsies"><p>Sorry!  No results, please try again.</p><img src= https://media.giphy.com/media/80TEu4wOBdPLG/giphy.gif?response_id=5925e85668c66efd24a18672><button class="rmvBtn">Remove</button></div>');
+            $('#userInput').val('');
           } else {
-          var searchResult = response.data[0].images.downsized.url;
+          var searchResult = response.data[randNum].images.downsized.url;
           $('#userInput').val('');
           var imgDiv = '<div class="squares">';
           imgDiv += '<img src="' + searchResult + '">';
           imgDiv += '<button class="rmvBtn">Remove</button>';
-          imgDiv += '<button class="favBtn">Favorites</button>';
+          imgDiv += '<button class="favBtn">Add To Favorites</button>';
           imgDiv += '</div>';
           $('.container').append(imgDiv);
         }

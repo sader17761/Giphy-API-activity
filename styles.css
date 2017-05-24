@@ -8,6 +8,35 @@
   float:left;
 }
 
+.squares {
+  width: 300px;
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 5px 5px 7px #888888;
+}
+
+.whoopsies {
+  width: 300px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 5px 5px 7px #888888;
+}
+
+.rmvBtn {
+  width: 145px;
+  height: 30px;
+
+}
+
+.favBtn {
+  width: 145px;
+  height: 30px;
+  margin-left: 10px;
+}
+
 img{
   width: 300px;
 }
