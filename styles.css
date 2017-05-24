@@ -1,0 +1,27 @@
+.container {
+  width: 50%;
+  float: left;
+}
+
+.favorites {
+  width: 50%;
+  float:left;
+}
+
+img{
+  width: 300px;
+}
+
+.squares {
+  display: block;
+}
+
+/*.rmvBtn {
+  float: left;
+
+}
+
+.favBtn{
+
+float: right;
+}*/
