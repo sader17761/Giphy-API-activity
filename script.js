@@ -9,7 +9,7 @@ function onReady(){
   $(document).on('click', '#searchBtn', function(){
     //var randNum = Math.floor(Math.random() * 25);
     if($('#userInput').val() === '' || $('#userInput').val() === undefined){
-      alert('OhmyGawd!');
+      alert('Oops!  Your search was empty.');
     } else {
       var searchURL = 'http://api.giphy.com/v1/gifs/search?q=';
       searchURL += $('#userInput').val();
@@ -21,7 +21,7 @@ function onReady(){
         success: function (response) {
           console.log(response);
           if(response.data.length === 0){
-            $('.container').append('<div class="whoopsies"><p>Sorry!  No results, please try again.</p><img src= https://media.giphy.com/media/80TEu4wOBdPLG/giphy.gif?response_id=5925e85668c66efd24a18672><button class="rmvBtn">Remove</button></div>');
+            $('.container').append('<div class="whoopsies"><p>Sorry!  No results, please try again.</p><img id="whoopsImg" src= https://media.giphy.com/media/80TEu4wOBdPLG/giphy.gif?response_id=5925e85668c66efd24a18672><button class="rmvBtn">Remove</button></div>');
             $('#userInput').val('');
           } else {
             for (var i = 0; i < response.data.length - 10; i++) {
@@ -50,9 +50,11 @@ function onReady(){
 } // end of onReady
 
 function clearResults(){
-  $('.squares').remove();
-  $( ".container" ).toggle();
-  $( ".favorites" ).toggle();
+  if($('#showFavoritesBtn').html() === 'Show Favorites'){
+    $('.container').children().remove();
+  } else {
+    $('.favorites').children().remove();
+  }
 }
 
 function showFavorites(){
@@ -60,7 +62,11 @@ function showFavorites(){
   $( ".favorites" ).toggle();
   if($('#showFavoritesBtn').html() === 'Show Favorites'){
     $('#showFavoritesBtn').html('Show Results');
+    $('#clearBtn').html('Clear Favorites');
+    $('h1').html('My Favorites');
   } else {
     $('#showFavoritesBtn').html('Show Favorites');
+    $('#clearBtn').html('Clear Results');
+    $('h1').html('Results');
   }
 }

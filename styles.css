@@ -30,6 +30,19 @@ input {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   font-size: 14px;
+  font-weight: 100;
+  background-color: rgb(50, 93, 150);
+  color: rgb(224, 224, 224);
+}
+
+#searchBtn:hover, #clearBtn:hover, #showFavoritesBtn:hover {
+  background-color: rgb(37, 75, 125);
+  color: #fff;
+  border: 2px solid rgb(50, 93, 150);
+}
+
+#searchBtn:focus, #clearBtn:focus, #showFavoritesBtn:focus {
+  outline: 0;
 }
 
 #clearBtn{
@@ -38,7 +51,10 @@ input {
   border: none;
   border-radius: 4px;
   font-size: 14px;
+  font-weight: 100;
   margin-left: 15px;
+  background-color: rgb(50, 93, 150);
+  color: rgb(224, 224, 224);
 }
 
 #showFavoritesBtn{
@@ -47,11 +63,19 @@ input {
   border: none;
   border-radius: 4px;
   font-size: 14px;
+  font-weight: 100;
   margin-left: 15px;
+  background-color: rgb(50, 93, 150);
+  color: rgb(224, 224, 224);
 }
 
 ::-webkit-input-placeholder {
   color: rgb(190, 190, 190);
+}
+
+.header{
+  margin: 20px 30px;
+  color: rgb(37, 75, 125);
 }
 
 .container {
@@ -71,7 +95,7 @@ input {
 h1 {
   margin: 25px 0 10px 0;
   font-size: 36px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid rgb(37, 75, 125);
 }
 
 .squares {
@@ -88,12 +112,18 @@ h1 {
 }
 
 .whoopsies {
-  width: 200px;
-  margin-top: 20px;
+  width: 300px;
+  height: auto;
+  margin: 20px auto;
   text-align: center;
   border: 1px solid black;
   padding: 5px;
   box-shadow: 5px 5px 7px #888888;
+}
+
+#whoopsImg {
+  width: 300px;
+  height: 420px;
 }
 
 .rmvBtn {
