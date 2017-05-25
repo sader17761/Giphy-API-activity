@@ -1,23 +1,94 @@
+html body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(228, 228, 228);
+}
+
+.inputs {
+  height: 50px;
+  background-color: rgb(66, 66, 66);
+}
+
+input {
+  height: 30px;
+  width: 250px;
+  margin: 9px 0 0 28px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: lighter;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: none;
+  vertical-align: bottom;
+}
+
+#searchBtn{
+  height: 32px;
+  width: 80px;
+  margin-left: -4px;
+  border: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 14px;
+}
+
+#clearBtn{
+  height: 32px;
+  width: 130px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+#showFavoritesBtn{
+  height: 32px;
+  width: 130px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(190, 190, 190);
+}
+
 .container {
-  width: 50%;
-  float: left;
+  width: 96%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .favorites {
-  width: 50%;
-  float:left;
+  display: none;
+  width: 96%;
+  height: auto;
+  margin: 0 auto;
+
+}
+
+h1 {
+  margin: 25px 0 10px 0;
+  font-size: 36px;
+  border-bottom: 1px solid black;
 }
 
 .squares {
-  width: 300px;
-  margin-top: 20px;
+  display: inline-block;
+  height: auto;
+  width: 235px;
+  float:left;
+  margin: 0 29px 20px 0;
   border: 1px solid black;
   padding: 5px;
   box-shadow: 5px 5px 7px #888888;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .whoopsies {
-  width: 300px;
+  width: 200px;
   margin-top: 20px;
   text-align: center;
   border: 1px solid black;
@@ -26,31 +97,18 @@
 }
 
 .rmvBtn {
-  width: 145px;
-  height: 30px;
+  width: 115px;
+  height: 25px;
 
 }
 
 .favBtn {
-  width: 145px;
-  height: 30px;
-  margin-left: 10px;
+  width: 115px;
+  height: 25px;
+  margin-left: 5px;
 }
 
 img{
-  width: 300px;
+  width: 235px;
+  height: 160px;
 }
-
-.squares {
-  display: block;
-}
-
-/*.rmvBtn {
-  float: left;
-
-}
-
-.favBtn{
-
-float: right;
-}*/
